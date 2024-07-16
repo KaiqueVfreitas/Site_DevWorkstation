@@ -1,3 +1,44 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vh;
+  height: 10vh;
+}
+header div {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
 header div img {
-  width: 8vw;
+  width: auto;
+  height: 6vh;
+}
+header div h6 {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin: 0;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 9vw;
+}
+header nav a {
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+}
+header button {
+  border-radius: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+}
+header button i, header button p {
+  margin: 0.6vw;
+  font-weight: 700;
+  color: #f1f1f1;
+  font-size: 1em;
 }/*# sourceMappingURL=style.css.map */

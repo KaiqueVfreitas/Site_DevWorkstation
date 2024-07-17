@@ -1,3 +1,13 @@
+@charset "UTF-8";
+body {
+  background: no-repeat url(/IMG/fundo.png);
+  background-size: 100% 86%;
+  color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilização do topo */
 header {
   display: flex;
   justify-content: space-between;
@@ -16,24 +26,26 @@ header div img {
 }
 header div h6 {
   font-weight: 700;
-  font-size: 1.2em;
-  margin: 0;
+  font-size: 2em;
+  color: #f1f1f1;
 }
 header nav {
   display: flex;
   align-items: center;
-  gap: 9vw;
+  gap: 5vw;
 }
 header nav a {
-  font-size: 1em;
+  font-size: 2vh;
+  font-weight: 600;
   text-decoration: none;
-  color: black;
+  color: #f1f1f1;
 }
 header button {
   border-radius: 16px;
   border: none;
   display: flex;
   align-items: center;
+  height: 7vh;
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
 }
 header button i, header button p {
@@ -41,4 +53,37 @@ header button i, header button p {
   font-weight: 700;
   color: #f1f1f1;
   font-size: 1em;
+}
+
+/* Estilização ínicio da página */
+section.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 105vh;
+  text-align: center;
+  position: relative;
+}
+section.inicio h1 {
+  margin: 3vw;
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #f2f2f2;
+  margin-bottom: 5vh;
+}
+section.inicio h3 {
+  margin-top: 35vh;
+  font-size: 1.5em;
+  color: #f2f2f2;
+}
+section.inicio .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6vw;
+}
+section.inicio .logos img {
+  width: auto;
+  height: 10vh;
 }/*# sourceMappingURL=style.css.map */

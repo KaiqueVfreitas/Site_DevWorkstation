@@ -3,19 +3,17 @@ body {
   color: #f3f3f3;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-div.headerInicio {
-  background: no-repeat url(/IMG/fundo.png);
-  background-size: 100% 86%;
-}
-
-/* Estilização do topo */
+/* Estilização do header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  padding: 0 2%;
 }
 header div {
   display: flex;
@@ -28,7 +26,7 @@ header div img {
 }
 header div h6 {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em; /* Aumentado */
   color: #f3f3f3;
 }
 header nav {
@@ -37,7 +35,7 @@ header nav {
   gap: 5vw;
 }
 header nav a {
-  font-size: 2vh;
+  font-size: 2.5vh; /* Aumentado */
   font-weight: 600;
   text-decoration: none;
   color: #f3f3f3;
@@ -54,94 +52,94 @@ header button i, header button p {
   margin: 0.6vw;
   font-weight: 700;
   color: #f3f3f3;
-  font-size: 1em;
+  font-size: 1.2em; /* Aumentado */
 }
 
-/* Estilização ínicio da página */
-section.inicio {
+/* Estilização da seção início */
+.inicio {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 105vh;
+  height: 100vh;
+  width: 100%; /* Garantir 100% da largura */
   text-align: center;
-  position: relative;
+  padding: 0 2%;
 }
-section.inicio h1 {
+.inicio h1 {
   margin: 3vw;
   font-size: 3.5em;
   font-weight: 700;
   color: #f3f3f3;
   margin-bottom: 5vh;
 }
-section.inicio h3 {
+.inicio h3 {
   margin-top: 35vh;
   font-size: 1.5em;
   color: #f3f3f3;
 }
-section.inicio .logos {
+.inicio .logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6vw;
 }
-section.inicio .logos img {
+.inicio .logos img {
   width: auto;
   height: 10vh;
 }
 
-/*Estilização da parte Nos Somos a Dev Workstation*/
-section.devWorkstation {
+/* Estilização da seção Dev Workstation */
+.devWorkstation {
   display: flex;
-  margin: 0.5vh 1vw 0.5vh 1vw;
+  margin: 1vh 2%;
   align-items: center;
+  width: 100%; /* Garantir 100% da largura */
 }
-section.devWorkstation h2, section.devWorkstation p {
+.devWorkstation h2, .devWorkstation p {
   color: black;
 }
-section.devWorkstation h2 {
+.devWorkstation h2 {
   font-size: 2em;
-  background: #3372E3;
-  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
+  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   align-items: center;
-  font-family: Anton;
+  font-family: "Anton", sans-serif;
   margin-bottom: 7vh;
 }
-section.devWorkstation p {
+.devWorkstation p {
   font-weight: 650;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 2em;
 }
-section.devWorkstation img {
+.devWorkstation img {
   height: 95vh;
 }
 
-/*Estilização dos cards da areas que desenvolvemos soluções*/
-section.cards {
+/* Estilização da seção de cards */
+.cards {
   margin-top: 9rem;
+  width: 100%; /* Garantir 100% da largura */
 }
-section.cards h2 {
+.cards h2 {
   font-size: 2em;
-  background: #3372E3;
-  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
+  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   align-items: center;
-  font-family: Anton;
+  font-family: "Anton", sans-serif;
   margin-bottom: 7vh;
   text-align: center;
 }
-section.cards div.containerCards {
+.cards .containerCards {
   display: flex;
   justify-content: space-between;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0 1em;
 }
-section.cards div.containerCards div {
+.cards .containerCards div {
   background-image: radial-gradient(circle farthest-corner at 11.3% -0.8%, rgb(153, 14, 241) 0%, rgb(41, 3, 101) 100.2%);
   border-radius: 35px;
   width: 15vw;
@@ -151,54 +149,54 @@ section.cards div.containerCards div {
   justify-content: center;
   align-items: center;
 }
-section.cards div.containerCards div img {
+.cards .containerCards div img {
   border-radius: 30px;
   width: 13vw;
   height: 18vh;
   background-color: #f3f3f3;
   margin-bottom: 4vh;
 }
-section.cards div.containerCards div h6 {
-  font-family: Open Sans;
+.cards .containerCards div h6 {
+  font-family: "Open Sans", sans-serif;
   font-size: 2em;
   font-weight: 700;
   color: #f3f3f3;
 }
-section.cards div.containerCards div#cardEmbarcados {
+.cards .containerCards #cardEmbarcados {
   width: 16vw;
 }
 
-/*Estilização da parte Sobre Nós*/
-section.sobreNos {
+/* Estilização da seção Sobre Nós */
+.sobreNos {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%; /* Garantir 100% da largura */
 }
-section.sobreNos h2 {
+.sobreNos h2 {
   margin-top: 5vh;
   font-size: 2em;
-  background: #3372E3;
-  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
+  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   align-items: center;
-  font-family: Anton;
+  font-family: "Anton", sans-serif;
   margin-bottom: 3vh;
   text-align: center;
 }
-section.sobreNos p, section.sobreNos h3 {
+.sobreNos p, .sobreNos h3 {
   font-weight: 650;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 1.3em;
   color: #000;
 }
-section.sobreNos div {
+.sobreNos div {
   display: flex;
   justify-content: center;
 }
-section.sobreNos div button {
+.sobreNos div button {
   margin-top: 2vh;
   border-radius: 16px;
   border: none;
@@ -208,9 +206,39 @@ section.sobreNos div button {
   width: 13vw;
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
 }
-section.sobreNos div button i, section.sobreNos div button p {
+.sobreNos div button i, .sobreNos div button p {
   margin: 0.6vw;
   font-weight: 700;
   color: #f3f3f3;
   font-size: 1em;
+}
+
+/* Estilização do footer */
+footer {
+  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+  padding: 3rem 0;
+}
+footer .row {
+  margin: 0;
+  text-align: left;
+}
+footer .row .col {
+  flex: 1;
+}
+footer .row .col img {
+  max-width: 100%;
+  height: auto;
+}
+footer .row .col p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+footer .mt-3 {
+  margin-top: 1rem;
+}
+footer .mt-3 a {
+  color: #f3f3f3;
+}
+footer .mt-3 .mx-2 {
+  margin: 0 0.5rem;
 }/*# sourceMappingURL=style.css.map */

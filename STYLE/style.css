@@ -1,19 +1,21 @@
-@charset "UTF-8";
 body {
   color: #f3f3f3;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-/* Estilização do header */
+div.headerInicio {
+  background: no-repeat url(/IMG/fundo.png);
+  background-size: 100% 86%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  padding: 0 2%;
+  padding: 0 2vw;
 }
 header div {
   display: flex;
@@ -21,13 +23,13 @@ header div {
   gap: 0.4em;
 }
 header div img {
-  width: auto;
   height: 6vh;
 }
 header div h6 {
   font-weight: 700;
-  font-size: 2.5em; /* Aumentado */
+  font-size: 2em;
   color: #f3f3f3;
+  line-height: 6vh;
 }
 header nav {
   display: flex;
@@ -35,7 +37,7 @@ header nav {
   gap: 5vw;
 }
 header nav a {
-  font-size: 2.5vh; /* Aumentado */
+  font-size: 2vh;
   font-weight: 600;
   text-decoration: none;
   color: #f3f3f3;
@@ -52,94 +54,86 @@ header button i, header button p {
   margin: 0.6vw;
   font-weight: 700;
   color: #f3f3f3;
-  font-size: 1.2em; /* Aumentado */
+  font-size: 1em;
 }
 
-/* Estilização da seção início */
-.inicio {
+section.inicio {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100%; /* Garantir 100% da largura */
   text-align: center;
-  padding: 0 2%;
+  position: relative;
+  padding: 0 2vw;
 }
-.inicio h1 {
+section.inicio h1 {
   margin: 3vw;
   font-size: 3.5em;
   font-weight: 700;
   color: #f3f3f3;
   margin-bottom: 5vh;
 }
-.inicio h3 {
+section.inicio h3 {
   margin-top: 35vh;
   font-size: 1.5em;
   color: #f3f3f3;
 }
-.inicio .logos {
+section.inicio .logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6vw;
 }
-.inicio .logos img {
-  width: auto;
+section.inicio .logos img {
   height: 10vh;
 }
 
-/* Estilização da seção Dev Workstation */
-.devWorkstation {
+section.devWorkstation {
   display: flex;
-  margin: 1vh 2%;
+  margin: 0.5vh 1vw;
   align-items: center;
-  width: 100%; /* Garantir 100% da largura */
 }
-.devWorkstation h2, .devWorkstation p {
-  color: black;
+section.devWorkstation h2, section.devWorkstation p {
+  color: #000;
 }
-.devWorkstation h2 {
+section.devWorkstation h2 {
   font-size: 2em;
-  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  align-items: center;
-  font-family: "Anton", sans-serif;
+  font-family: Anton;
   margin-bottom: 7vh;
 }
-.devWorkstation p {
+section.devWorkstation p {
   font-weight: 650;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 2em;
 }
-.devWorkstation img {
+section.devWorkstation img {
   height: 95vh;
 }
 
-/* Estilização da seção de cards */
-.cards {
+section.cards {
   margin-top: 9rem;
-  width: 100%; /* Garantir 100% da largura */
 }
-.cards h2 {
+section.cards h2 {
   font-size: 2em;
-  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  align-items: center;
-  font-family: "Anton", sans-serif;
+  font-family: Anton;
   margin-bottom: 7vh;
   text-align: center;
 }
-.cards .containerCards {
+section.cards .containerCards {
   display: flex;
   justify-content: space-between;
   margin: 0 1em;
 }
-.cards .containerCards div {
+section.cards .containerCards div {
   background-image: radial-gradient(circle farthest-corner at 11.3% -0.8%, rgb(153, 14, 241) 0%, rgb(41, 3, 101) 100.2%);
   border-radius: 35px;
   width: 15vw;
@@ -149,54 +143,51 @@ header button i, header button p {
   justify-content: center;
   align-items: center;
 }
-.cards .containerCards div img {
+section.cards .containerCards div img {
   border-radius: 30px;
   width: 13vw;
   height: 18vh;
   background-color: #f3f3f3;
   margin-bottom: 4vh;
 }
-.cards .containerCards div h6 {
-  font-family: "Open Sans", sans-serif;
+section.cards .containerCards div h6 {
+  font-family: "Open Sans";
   font-size: 2em;
   font-weight: 700;
   color: #f3f3f3;
 }
-.cards .containerCards #cardEmbarcados {
+section.cards .containerCards div#cardEmbarcados {
   width: 16vw;
 }
 
-/* Estilização da seção Sobre Nós */
-.sobreNos {
+section.sobreNos {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%; /* Garantir 100% da largura */
 }
-.sobreNos h2 {
+section.sobreNos h2 {
   margin-top: 5vh;
   font-size: 2em;
-  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+  background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  align-items: center;
-  font-family: "Anton", sans-serif;
+  font-family: Anton;
   margin-bottom: 3vh;
   text-align: center;
 }
-.sobreNos p, .sobreNos h3 {
+section.sobreNos p, section.sobreNos h3 {
   font-weight: 650;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   text-align: center;
   font-size: 1.3em;
   color: #000;
 }
-.sobreNos div {
+section.sobreNos div {
   display: flex;
   justify-content: center;
 }
-.sobreNos div button {
+section.sobreNos div button {
   margin-top: 2vh;
   border-radius: 16px;
   border: none;
@@ -206,39 +197,64 @@ header button i, header button p {
   width: 13vw;
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
 }
-.sobreNos div button i, .sobreNos div button p {
+section.sobreNos div button i, section.sobreNos div button p {
   margin: 0.6vw;
   font-weight: 700;
   color: #f3f3f3;
   font-size: 1em;
 }
 
-/* Estilização do footer */
 footer {
-  background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
-  padding: 3rem 0;
-}
-footer .row {
-  margin: 0;
-  text-align: left;
-}
-footer .row .col {
-  flex: 1;
-}
-footer .row .col img {
-  max-width: 100%;
-  height: auto;
-}
-footer .row .col p {
-  margin: 0;
-  padding: 0.5rem 0;
-}
-footer .mt-3 {
-  margin-top: 1rem;
-}
-footer .mt-3 a {
+  background-color: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
   color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 0;
 }
-footer .mt-3 .mx-2 {
-  margin: 0 0.5rem;
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container img {
+  border-radius: 15px;
+  height: auto;
+  width: 15vw;
+}
+footer .col-lg-6, footer .col-md-12 {
+  max-width: 50%;
+}
+footer .col-lg-3, footer .col-md-6 {
+  max-width: 25%;
+}
+
+#letreiro {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  background: none;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#letreiroTexto {
+  display: inline-block;
+  padding-left: 100%;
+  animation: letreiro 15s linear infinite;
+}
+
+@keyframes letreiro {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=style.css.map */

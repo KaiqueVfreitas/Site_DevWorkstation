@@ -1,21 +1,26 @@
 $gradiente: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
 $fontePrincipal: #f3f3f3;
+$fonteTexto: #000;
+$headerAltura: 10vh;
 
 body {
     color: $fontePrincipal;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-/* Estilização do header */
+div.headerInicio {
+    background: no-repeat url(/IMG/fundo.png);
+    background-size: 100% 86%;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
-    padding: 0 2%;
+    height: $headerAltura;
+    padding: 0 2vw;
 
     div {
         display: flex;
@@ -23,14 +28,14 @@ header {
         gap: 0.4em;
 
         img {
-            width: auto;
             height: 6vh;
         }
 
         h6 {
             font-weight: 700;
-            font-size: 2.5em; /* Aumentado */
+            font-size: 2em;
             color: $fontePrincipal;
+            line-height: 6vh; // Adiciona altura de linha para alinhar verticalmente
         }
     }
 
@@ -40,7 +45,7 @@ header {
         gap: 5vw;
 
         a {
-            font-size: 2.5vh; /* Aumentado */
+            font-size: 2vh;
             font-weight: 600;
             text-decoration: none;
             color: $fontePrincipal;
@@ -54,25 +59,25 @@ header {
         align-items: center;
         height: 7vh;
         background: $gradiente;
+        
         i, p {
             margin: 0.6vw;
             font-weight: 700;
             color: $fontePrincipal;
-            font-size: 1.2em; /* Aumentado */
+            font-size: 1em;
         }
     }
 }
 
-/* Estilização da seção início */
-.inicio {
+section.inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100%; /* Garantir 100% da largura */
     text-align: center;
-    padding: 0 2%;
+    position: relative;
+    padding: 0 2vw;
 
     h1 {
         margin: 3vw;
@@ -95,37 +100,33 @@ header {
         gap: 6vw;
 
         img {
-            width: auto;
             height: 10vh;
         }
     }
 }
 
-/* Estilização da seção Dev Workstation */
-.devWorkstation {
+section.devWorkstation {
     display: flex;
-    margin: 1vh 2%;
+    margin: 0.5vh 1vw;
     align-items: center;
-    width: 100%; /* Garantir 100% da largura */
 
     h2, p {
-        color: black;
+        color: $fonteTexto;
     }
 
     h2 {
         font-size: 2em;
-        background: $gradiente;
+        background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 300;
-        align-items: center;
-        font-family: 'Anton', sans-serif;
+        font-family: Anton;
         margin-bottom: 7vh;
     }
 
     p {
         font-weight: 650;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans';
         font-size: 2em;
     }
 
@@ -134,19 +135,16 @@ header {
     }
 }
 
-/* Estilização da seção de cards */
-.cards {
+section.cards {
     margin-top: 9rem;
-    width: 100%; /* Garantir 100% da largura */
 
     h2 {
         font-size: 2em;
-        background: $gradiente;
+        background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 300;
-        align-items: center;
-        font-family: 'Anton', sans-serif;
+        font-family: Anton;
         margin-bottom: 7vh;
         text-align: center;
     }
@@ -175,45 +173,42 @@ header {
             }
 
             h6 {
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Open Sans';
                 font-size: 2em;
                 font-weight: 700;
-                color: #f3f3f3;
+                color: $fontePrincipal;
             }
         }
 
-        #cardEmbarcados {
+        div#cardEmbarcados {
             width: 16vw;
         }
     }
 }
 
-/* Estilização da seção Sobre Nós */
-.sobreNos {
+section.sobreNos {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%; /* Garantir 100% da largura */
 
     h2 {
         margin-top: 5vh;
         font-size: 2em;
-        background: $gradiente;
+        background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 300;
-        align-items: center;
-        font-family: 'Anton', sans-serif;
+        font-family: Anton;
         margin-bottom: 3vh;
         text-align: center;
     }
 
     p, h3 {
         font-weight: 650;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans';
         text-align: center;
         font-size: 1.3em;
-        color: #000;
+        color: $fonteTexto;
     }
 
     div {
@@ -240,39 +235,57 @@ header {
     }
 }
 
-/* Estilização do footer */
 footer {
-    background: $gradiente;
-    padding: 3rem 0;
+    background-color: $gradiente;
+    color: $fontePrincipal;
+    text-align: center;
+    padding: 2rem 0;
 
-    .row {
-        margin: 0;
-        text-align: left;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-        .col {
-            flex: 1;
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            p {
-                margin: 0;
-                padding: 0.5rem 0;
-            }
+        img {
+            border-radius: 15px;
+            height: auto;
+            width: 15vw;
         }
     }
 
-    .mt-3 {
-        margin-top: 1rem;
-
-        a {
-            color: $fontePrincipal;
-        }
-
-        .mx-2 {
-            margin: 0 0.5rem;
-        }
+    .col-lg-6, .col-md-12 {
+        max-width: 50%;
     }
+
+    .col-lg-3, .col-md-6 {
+        max-width: 25%;
+    }
+}
+
+#letreiro {
+    position: fixed;
+    bottom: 10px; // Ajustar conforme necessário
+    width: 100%;
+    background: none;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#letreiroTexto {
+    display: inline-block;
+    padding-left: 100%;
+    animation: letreiro 15s linear infinite;
+}
+
+@keyframes letreiro {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }

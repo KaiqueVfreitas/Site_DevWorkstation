@@ -1,10 +1,13 @@
 @charset "UTF-8";
 body {
-  background: no-repeat url(/IMG/fundo.png);
-  background-size: 100% 86%;
-  color: #f2f2f2;
+  color: #f3f3f3;
   margin: 0;
   padding: 0;
+}
+
+div.headerInicio {
+  background: no-repeat url(/IMG/fundo.png);
+  background-size: 100% 86%;
 }
 
 /* Estilização do topo */
@@ -12,7 +15,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1vh;
   height: 10vh;
 }
 header div {
@@ -27,7 +29,7 @@ header div img {
 header div h6 {
   font-weight: 700;
   font-size: 2em;
-  color: #f1f1f1;
+  color: #f3f3f3;
 }
 header nav {
   display: flex;
@@ -38,7 +40,7 @@ header nav a {
   font-size: 2vh;
   font-weight: 600;
   text-decoration: none;
-  color: #f1f1f1;
+  color: #f3f3f3;
 }
 header button {
   border-radius: 16px;
@@ -51,7 +53,7 @@ header button {
 header button i, header button p {
   margin: 0.6vw;
   font-weight: 700;
-  color: #f1f1f1;
+  color: #f3f3f3;
   font-size: 1em;
 }
 
@@ -69,13 +71,13 @@ section.inicio h1 {
   margin: 3vw;
   font-size: 3.5em;
   font-weight: 700;
-  color: #f2f2f2;
+  color: #f3f3f3;
   margin-bottom: 5vh;
 }
 section.inicio h3 {
   margin-top: 35vh;
   font-size: 1.5em;
-  color: #f2f2f2;
+  color: #f3f3f3;
 }
 section.inicio .logos {
   display: flex;
@@ -86,4 +88,11 @@ section.inicio .logos {
 section.inicio .logos img {
   width: auto;
   height: 10vh;
+}
+
+section.devWorkstation h2, section.devWorkstation p {
+  color: black;
+}
+section.devWorkstation h2 {
+  font-size: 5vh;
 }/*# sourceMappingURL=style.css.map */

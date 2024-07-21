@@ -4,44 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!--Link do bootstrap-->
+    <!-- Link do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <!--Favicon do site-->
+    <!-- Favicon do site -->
     <link rel="shortcut icon" href="img/logoDW.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <!--Link das fontes usadas no site-->
+    <!-- Link das fontes usadas no site -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <!--Link CSS-->
+    <!-- Link CSS -->
     <link rel="stylesheet" href="./STYLE/style.css">
 
     <title>DEV WORKSTATION</title>
 </head>
 <body>
+    <!-- Conteúdo do site -->
     <header>
-        <div>
-            <img src="IMG/logoDW.png" alt="Logo DW">
-            <h1>DEV WORKSTATION</h1>
+        <div class="container">
+            <div>
+                <img src="IMG/logoDW.png" alt="Logo DW">
+                <h6>DEV WORKSTATION</h6>
+            </div>
+            <nav>
+                <a href="#">CONHEÇA</a>
+                <a href="#">PROJETOS</a>
+                <a href="#">SOBRE-NÓS</a>
+            </nav>
+            <button aria-label="Atendimento">
+                <i class="bi bi-chat-square-text"></i>
+                <p>ATENDIMENTO</p>
+            </button>
         </div>
-        <nav>
-            <a href="#">CONHEÇA</a>
-            <a href="#">PROJETOS</a>
-            <a href="#">SOBRE-NÓS</a>
-        </nav>
-        <button>
-            <i class="bi bi-chat-square-text"></i>
-            <span>ATENDIMENTO</span>
-        </button>
     </header>
+
     <main>
-        <section class="inicio">
-            <h2>Não criamos sistemas, criamos mundos</h2>
+        <section class="inicio text-center">
+            <h1>Não criamos sistemas, criamos mundos</h1>
             <h3>Grandes clientes para uma grande empresa:</h3>
-            <div class="logos">
+            <div>
                 <img src="IMG/logo-raizen-4096.png" alt="Logo Raizen">
                 <img src="IMG/logo-gol-4096.png" alt="Logo Gol">
                 <img src="IMG/logo-intel-1024.png" alt="Logo Intel">
@@ -50,86 +54,89 @@
                 <img src="IMG/logo-mcafee-1024.png" alt="Logo McAfee">
             </div>
         </section>
+
         <section class="devWorkstation">
             <article>
                 <h2>NOS SOMOS A DEV WORKSTATION</h2>
                 <p>Ajudamos na transformação digital no mundo ao desenvolver soluções web, sistemas mobile e desktop, embarcados e automações</p>
             </article>
-            <img src="IMG/mapaMental.png" alt="Mapa Mental">
+            <img src="IMG/mapaMental.png" alt="Mapa Mental da Dev Workstation">
         </section>
+
         <section class="cards">
             <h2>AREAS QUE DESENVOLVEMOS SOLUÇÕES</h2>
-            <div class="containerCards">
+            <div>
                 <div>
-                    <img src="IMG/imgMobile-removebg-preview.png" alt="Mobile">
-                    <h3>Mobile</h3>
+                    <img src="IMG/imgMobile-removebg-preview.png" alt="Desenvolvimento Mobile">
+                    <h6>Mobile</h6>
                 </div>
                 <div id="cardWeb">
-                    <img src="IMG/imgWeb-removebg-preview.png" alt="WEB">
-                    <h3>WEB</h3>
+                    <img src="IMG/imgWeb-removebg-preview.png" alt="Desenvolvimento Web">
+                    <h6>WEB</h6>
                 </div>
                 <div id="cardEmbarcados">
-                    <img src="IMG/imgEmbarcados-removebg-preview.png" alt="Embarcados">
-                    <h3>Embarcados</h3>
+                    <img src="IMG/imgEmbarcados-removebg-preview.png" alt="Desenvolvimento Embarcados">
+                    <h6>Embarcados</h6>
                 </div>
                 <div id="cardDesktop">
-                    <img src="IMG/imgDesktop-removebg-preview.png" alt="Desktop">
-                    <h3>Desktop</h3>
+                    <img src="IMG/imgDesktop-removebg-preview.png" alt="Desenvolvimento Desktop">
+                    <h6>Desktop</h6>
                 </div>
             </div>
         </section>
+
         <section class="sobreNos">
             <h2>SOBRE NÓS</h2>
-            <p>
-                Proeficiencia nas maiores linguagens do mercado com qualidade em varios setores. 
-                A Dev Workstation tem mais 5 anos experiencia no mercado digital, inovamos e criamos a todos os nossos clientes.
-                Entre em contato e tire suas duvidas
-            </p>
+            <p>Proeficiencia nas maiores linguagens do mercado com qualidade em varios setores. A Dev Workstation tem mais 5 anos experiencia no mercado digital, inovamos e criamos a todos os nossos clientes.</p>
             <h3>Entre em contato e tire suas dúvidas</h3>
             <div>
-                <button>
+                <button aria-label="Fale Conosco">
                     <i class="bi bi-chat-square-text"></i>
-                    <span>FALE CONOSCO</span>
+                    <p>FALE CONOSCO</p>
                 </button>
             </div>
         </section>
     </main>
-    <footer class="bg-primary text-white text-center text-lg-start">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h4 class="text-uppercase">Dev Workstation</h4>
-                    <p>
-                        Sede de Inovação move a Dev, buscando a melhora do mercado de tecnologia e resolução de problemas. Caso tenha interesse em conhecer mais sobre nós navegue e caso queira falar conosco clique no botão.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h4 class="text-uppercase">Navegue pelo Site</h4>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Conheça</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Projetos</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Sobre-nós</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <img src="IMG/localizacao01.avif" alt="Localização" style="border-radius: 15px;">
-                </div>
+
+    <section class="letreiro">
+            <marquee behavior="scroll" direction="left">       
+                <i>VALORIZAÇÃO DE IDEIAS</i>   
+                <i>TRANSPARÊNCIA</i>
+                <i>HONESTIDADE</i>
+                <i>PROEFICIENCIA</i> 
+                <i>DESEMPENHO</i>
+                <i>INOVAÇÃO</i>
+                <i>VALORIZAÇÃO DE PESSOAS</i>
+            </marquee>
+    </section>
+
+    <footer>
+        <div>
+            <article>
+                <h4>Dev Workstation</h4>
+                <p>Sede de Inovação move a Dev, buscando a melhora do mercado de tecnologia e resolução de problemas. Caso tenha interesse em conhecer mais sobre nós navegue e caso queira falar conosco clique no botão.</p>
+            </article>
+            <nav>
+                <h4>Navegue pelo Site</h4>
+                <ul>
+                    <li><a href="#">Conheça</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Sobre-nós</a></li>
+                </ul>
+            </nav>
+            <div class="imgSection">
+                <img src="IMG/localizacao01.avif" alt="Localização">
             </div>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2024 Copyright:
-            <a class="text-white" href="https://basilides.com.br/">ESCOLA TÉCNICA ESTADUAL PROFESSOR BASILIDES DE GODOY</a>
+        <div class="copyrightSection">
+            © 2024 Copyright: <a href="https://basilides.com.br/">ESCOLA TÉCNICA ESTADUAL PROFESSOR BASILIDES DE GODOY</a>
         </div>
     </footer>
-    <!--Script do Bootstrap-->
+
+    <!-- Script do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!--Script do Typescript/Javascript-->
+
+    <!-- Script do TypeScript/JavaScript -->
     <script src="node_modules/typescript/script.js"></script>
 </body>
 </html>

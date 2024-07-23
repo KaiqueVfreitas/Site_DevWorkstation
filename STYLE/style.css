@@ -2,6 +2,7 @@
   color: #f3f3f3;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -21,17 +22,16 @@ header div.container {
 header div.container div {
   display: flex;
   align-items: center;
-  gap: 1em;
 }
 header div.container div img {
-  width: auto;
-  height: 4.5vh;
+  width: 5vw;
+  margin: 0.7vw;
 }
 header div.container div h6 {
-  margin-top: 1.9vh;
+  padding-top: 1vh;
+  font-family: "Open Sans";
   font-weight: 700;
-  font-size: 1em;
-  color: #f3f3f3;
+  font-size: 1.6em;
 }
 header nav {
   display: flex;
@@ -49,55 +49,82 @@ header button {
   border: none;
   display: flex;
   align-items: center;
-  height: 5vh;
+  height: 6vh;
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
 }
-header button i, header button p {
+header button i,
+header button p {
   margin: 0.6vw;
   font-weight: 700;
   color: #f3f3f3;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 header:hover {
   top: 0;
 }
 
 main section.inicio {
-  background: no-repeat url(/IMG/fundo.png);
+  background: no-repeat url(../IMG/fundo.png);
   background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   height: 100vh;
-  text-align: center;
   position: relative;
 }
-main section.inicio h1 {
-  font-size: 3.5em;
+main section.inicio .digitacao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+main section.inicio .digitacao div {
+  display: block;
   font-weight: 700;
-  color: #f3f3f3;
+  font-size: 4rem;
 }
-main section.inicio h3 {
-  font-size: 1.5em;
-  color: #f3f3f3;
+main section.inicio .footerSectionInicio {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-main section.inicio div {
+main section.inicio .footerSectionInicio .divSubtituloInicio {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+main section.inicio .footerSectionInicio .divSubtituloInicio h3 {
+  font-size: 1.8rem;
+}
+main section.inicio .footerSectionInicio .divImg {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8vw;
 }
-main section.inicio div img {
-  width: auto;
-  height: 12vh;
+main section.inicio .footerSectionInicio .divImg img {
+  width: 6vw;
+  height: auto;
 }
 main section.devWorkstation {
   display: flex;
   margin: 0.5vh 1vw;
   align-items: center;
+  padding: 15vh 0;
 }
-main section.devWorkstation h2, main section.devWorkstation p {
-  color: black;
+main section.devWorkstation h2,
+main section.devWorkstation p {
+  color: #000;
 }
 main section.devWorkstation h2 {
   font-size: 2em;
@@ -105,12 +132,12 @@ main section.devWorkstation h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  font-family: Anton;
+  font-family: "Anton";
   margin-bottom: 7vh;
 }
 main section.devWorkstation p {
   font-weight: 650;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 2em;
 }
 main section.devWorkstation img {
@@ -125,7 +152,7 @@ main section.cards h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  font-family: Anton;
+  font-family: "Anton";
   margin-bottom: 7vh;
   text-align: center;
 }
@@ -152,7 +179,7 @@ main section.cards div div img {
   margin-bottom: 4vh;
 }
 main section.cards div div h6 {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 2em;
   font-weight: 700;
   color: #f3f3f3;
@@ -162,6 +189,7 @@ main section.cards div #cardEmbarcados {
 }
 main section.sobreNos {
   display: flex;
+  padding: 15vh 0;
   justify-content: center;
   flex-direction: column;
 }
@@ -172,93 +200,112 @@ main section.sobreNos h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
-  font-family: Anton;
+  font-family: "Anton";
   margin-bottom: 3vh;
   text-align: center;
 }
-main section.sobreNos p, main section.sobreNos h3 {
+main section.sobreNos p,
+main section.sobreNos h3 {
   font-weight: 650;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #000;
 }
 main section.sobreNos div {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 main section.sobreNos div button {
-  margin-top: 2vh;
-  border-radius: 16px;
-  border: none;
   display: flex;
   align-items: center;
-  height: 7vh;
-  width: 13vw;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
+  border: none;
+  cursor: pointer;
 }
-main section.sobreNos div button i, main section.sobreNos div button p {
-  margin: 0.6vw;
-  font-weight: 700;
+main section.sobreNos div button i,
+main section.sobreNos div button p {
+  font-family: "Open Sans";
   color: #f3f3f3;
-  font-size: 1em;
+  font-weight: 650;
+  font-size: 1rem;
+}
+main section.sobreNos div button i {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+main section.sobreNos div button p {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 section.letreiro {
-  margin-top: 10vh;
+  padding: 5vh 0;
+  width: 100%;
 }
 section.letreiro marquee {
-  display: flex;
-  padding: 2em;
+  width: 100%;
 }
 section.letreiro marquee i {
-  margin-right: 10em;
-  font-weight: 650;
-  font-family: Open Sans;
-  text-align: center;
-  font-size: 1em;
   color: #000;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: "Open Sans";
+}
+section.letreiro marquee i#vermelhinho {
+  color: #b81414;
+  margin-right: 6.5vw;
 }
 
-footer {
+footer.finalDoSite {
   background: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
   color: #f3f3f3;
   text-align: center;
 }
-footer div {
+footer.finalDoSite div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
-footer div article, footer div nav, footer div .imgSection {
+footer.finalDoSite div article,
+footer.finalDoSite div nav,
+footer.finalDoSite div .imgSection {
   max-width: 30%;
   margin: 0 1rem;
 }
-footer div article h4, footer div nav h4, footer div .imgSection h4 {
+footer.finalDoSite div article h4,
+footer.finalDoSite div nav h4,
+footer.finalDoSite div .imgSection h4 {
   text-transform: uppercase;
 }
-footer div nav ul {
+footer.finalDoSite div nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-footer div nav ul li {
+footer.finalDoSite div nav ul li {
   margin: 0.5rem 0;
 }
-footer div nav ul li a {
+footer.finalDoSite div nav ul li a {
   color: #f3f3f3;
   text-decoration: none;
 }
-footer div div.imgSection img {
+footer.finalDoSite div div.imgSection img {
   border-radius: 15px;
   width: 100%;
 }
-footer div.copyrightSection {
+footer.finalDoSite div.copyrightSection {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
 }
-footer div.copyrightSection a {
+footer.finalDoSite div.copyrightSection a {
   color: #f3f3f3;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

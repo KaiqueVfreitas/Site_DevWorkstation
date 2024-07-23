@@ -1,277 +1,336 @@
-$gradiente: linear-gradient(to right, #004aad, #7F00FF, #E100FF);
-$corDaFontePrincipal: #f3f3f3;
+@import 'variaveis';
+
 
 * {
-    color: $corDaFontePrincipal;
-    margin: 0;
-    padding: 0;
+  color: $corDaFontePrincipal;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 1, 0.514);
-    z-index: 1;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: $corFundoBotao;
+  z-index: 1;
 
-    div.container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 8vh;
-        div {
-            display: flex;
-            align-items: center;
-            gap: 1em;
-            img {
-                width: auto;
-                height: 4.5vh;
-            }
-            h6 {
-                margin-top: 1.9vh;
-                font-weight: 700;
-                font-size: 1em;
-                color: $corDaFontePrincipal;
-            }
-        }
+  div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    div {
+      display: flex;
+      align-items: center;
+      img {
+        width: 5vw;
+        margin: 0.7vw;
+      }
+      h6 {
+        padding-top: 1vh;
+        font-family: $fonteFamiliaPrimaria;
+        font-weight: 700;
+        font-size: clamp(1em, 1.6em, 2em);
+      }
     }
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 5vw;
-        a {
-            font-size: 2vh;
-            font-weight: 600;
-            text-decoration: none;
-            color: $corDaFontePrincipal;
-        }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(2vw, 5vw, 10vw);
+    a {
+      font-size: clamp(1.5vh, 2vh, 2.5vh);
+      font-weight: 600;
+      text-decoration: none;
+      color: $corDaFontePrincipal;
     }
-    button {
-        border-radius: 16px;
-        border: none;
-        display: flex;
-        align-items: center;
-        height: 5vh;
-        background: $gradiente;
-        i, p {
-            margin: 0.6vw;
-            font-weight: 700;
-            color: $corDaFontePrincipal;
-            font-size: 0.7em;
-        }
+  }
+  button {
+    border-radius: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    height: clamp(3vh, 6vh, 12vh);
+    background: $gradiente;
+    i,
+    p {
+      margin: clamp(0.3vw, 0.6vw, 1vw);
+      font-weight: 700;
+      color: $corDaFontePrincipal;
+      font-size: clamp(0.4em, 0.9em, 1em);
     }
+  }
 
-    &:hover {
-        top: 0;
-    }
+  &:hover {
+    top: 0;
+  }
 }
-
 
 main {
-    section.inicio {
-        background: no-repeat url(/IMG/fundo.png);
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100vh;
+  section.inicio {
+    background: no-repeat url(../IMG/fundo.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    .digitacao {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      white-space: nowrap;
+
+      div {
+        display: block;
+        font-weight: 700;
+        font-size: clamp(2rem, 4rem, 6rem);
+      }
+    
+    }
+
+    .footerSectionInicio {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .divSubtituloInicio {
         text-align: center;
-        position: relative;
-        h1 {
-            font-size: 3.5em;
-            font-weight: 700;
-            color: $corDaFontePrincipal;
-        }
+        margin-bottom: clamp(1rem, 1.5rem, 2rem);
         h3 {
-            font-size: 1.5em;
-            color: $corDaFontePrincipal;
+          font-size: clamp(1.5rem, 1.8rem, 2rem);
         }
-        div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            img {
-                width: auto;
-                height: 12vh;
-            }
-        }
-    }
+      }
 
-    section.devWorkstation {
+      .divImg {
         display: flex;
-        margin: 0.5vh 1vw;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
-        h2, p {
-            color: black;
-        }
-        h2 {
-            font-size: 2em;
-            background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 300;
-            font-family: Anton;
-            margin-bottom: 7vh;
-        }
-        p {
-            font-weight: 650;
-            font-family: Open Sans;
-            font-size: 2em;
-        }
+        gap: clamp(4vw, 8vw, 12vw);
         img {
-            height: 95vh;
+          width: clamp(3vw, 6vw, 12vw);
+          height: auto;
         }
+      }
     }
+  }
 
-    section.cards {
-        margin-top: 9rem;
-        h2 {
-            font-size: 2em;
-            background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 300;
-            font-family: Anton;
-            margin-bottom: 7vh;
-            text-align: center;
-        }
-        div {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 1em;
-            div {
-                background-image: radial-gradient(circle farthest-corner at 11.3% -0.8%, rgba(153,14,241,1) 0%, rgba(41,3,101,1) 100.2%);
-                border-radius: 35px;
-                width: 15vw;
-                height: 38vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                img {
-                    border-radius: 30px;
-                    width: 13vw;
-                    height: 18vh;
-                    background-color: #f3f3f3;
-                    margin-bottom: 4vh;
-                }
-                h6 {
-                    font-family: Open Sans;
-                    font-size: 2em;
-                    font-weight: 700;
-                    color: #f3f3f3;
-                }
-            }
-            #cardEmbarcados {
-                width: 16vw;
-            }
-        }
+  section.devWorkstation {
+    display: flex;
+    margin: clamp(0.3vh, 0.5vh, 1vh) clamp(0.5vw, 1vw, 2vw);
+    align-items: center;
+    padding: clamp(10vh, 15vh, 20vh) 0;
+    h2,
+    p {
+      color: $corTextoPreto;
     }
+    h2 {
+      font-size: clamp(1.5em, 2em, 2.5em);
+      background: $corBotaoGradiente;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 300;
+      font-family: $fonteFamiliaSecundaria;
+      margin-bottom: clamp(5vh, 7vh, 10vh);
+    }
+    p {
+      font-weight: 650;
+      font-family: $fonteFamiliaPrimaria;
+      font-size: clamp(1.5em, 2em, 2.5em);
+    }
+    img {
+      height: clamp(70vh, 95vh, 100vh);
+    }
+  }
 
-    section.sobreNos {
+  section.cards {
+    margin-top: clamp(5rem, 9rem, 12rem);
+    h2 {
+      font-size: clamp(1.5em, 2em, 2.5em);
+      background: $corBotaoGradiente;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 300;
+      font-family: $fonteFamiliaSecundaria;
+      margin-bottom: clamp(5vh, 7vh, 10vh);
+      text-align: center;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 clamp(0.5em, 1em, 2em);
+      div {
+        background-image: radial-gradient(
+          circle farthest-corner at 11.3% -0.8%,
+          rgba(153, 14, 241, 1) 0%,
+          rgba(41, 3, 101, 1) 100.2%
+        );
+        border-radius: 35px;
+        width: clamp(10vw, 15vw, 20vw);
+        height: clamp(25vh, 38vh, 45vh);
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        h2 {
-            margin-top: 5vh;
-            font-size: 2em;
-            background: linear-gradient(to right, #3372E3 0%, #7426EF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 300;
-            font-family: Anton;
-            margin-bottom: 3vh;
-            text-align: center;
+        justify-content: center;
+        align-items: center;
+        img {
+          border-radius: 30px;
+          width: clamp(10vw, 13vw, 15vw);
+          height: clamp(12vh, 18vh, 20vh);
+          background-color: $corDaFontePrincipal;
+          margin-bottom: clamp(2vh, 4vh, 6vh);
         }
-        p, h3 {
-            font-weight: 650;
-            font-family: Open Sans;
-            text-align: center;
-            font-size: 1.3em;
-            color: #000;
+        h6 {
+          font-family: $fonteFamiliaPrimaria;
+          font-size: clamp(1.5em, 2em, 2.5em);
+          font-weight: 700;
+          color: $corDaFontePrincipal;
         }
-        div {
-            display: flex;
-            justify-content: center;
-            button {
-                margin-top: 2vh;
-                border-radius: 16px;
-                border: none;
-                display: flex;
-                align-items: center;
-                height: 7vh;
-                width: 13vw;
-                background: $gradiente;
-                i, p {
-                    margin: 0.6vw;
-                    font-weight: 700;
-                    color: $corDaFontePrincipal;
-                    font-size: 1em;
-                }
-            }
-        }
+      }
+      #cardEmbarcados {
+        width: clamp(12vw, 16vw, 20vw);
+      }
     }
-}
-section.letreiro{
-    margin-top: 10vh;
-    marquee{
-        display: flex;
-        padding: 2em;
-        i{
-            margin-right: 10em;
-            font-weight: 650;
-            font-family: Open Sans;
-            text-align: center;
-            font-size: 1em;
-            color: #000;
-        }
+  }
+
+  section.sobreNos {
+    display: flex;
+    padding: clamp(10vh, 15vh, 20vh) 0;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      margin-top: clamp(3vh, 5vh, 7vh);
+      font-size: clamp(1.5em, 2em, 2.5em);
+      background: $corBotaoGradiente;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 300;
+      font-family: $fonteFamiliaSecundaria;
+      margin-bottom: clamp(2vh, 3vh, 5vh);
+      text-align: center;
     }
-}
-footer {
-    background: $gradiente;
-    color: $corDaFontePrincipal;
-    text-align: center;
+
+    p,
+    h3 {
+      font-weight: 650;
+      font-family: $fonteFamiliaPrimaria;
+      text-align: center;
+      font-size: clamp(1em, 3em, 1.5em);
+      color: $corTextoPreto;
+    }
 
     div {
+      display: flex;
+      justify-content: center;
+      margin-top: clamp(1rem, 2rem, 3rem);
+
+      button {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
-        article, nav, .imgSection {
-            max-width: 30%;
-            margin: 0 1rem;
-            h4 {
-                text-transform: uppercase;
-            }
+        justify-content: center;
+        padding: clamp(1rem, 1.5rem, 2rem) clamp(2rem, 3rem, 4rem);
+        border-radius: 50px;
+        background: $gradiente;
+        border: none;
+        cursor: pointer;
+
+        i,
+        p {
+          font-family: $fonteFamiliaPrimaria;
+          color: $corDaFontePrincipal;
+          font-weight: 650;
+          font-size: clamp(0.5rem, 1rem, 2rem);
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            li {
-                margin: 0.5rem 0;
-                a {
-                    color: $corDaFontePrincipal;
-                    text-decoration: none;
-                }
-            }
+
+        i {
+          margin-right: clamp(0.5rem, 1rem, 1.5rem);
+          display: flex;
+          align-items: center;
         }
-        div.imgSection img {
-            border-radius: 15px;
-            width: 100%;
+
+        p {
+          margin: 0;
+          display: flex;
+          align-items: center;
         }
+      }
     }
-    div.copyrightSection {
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.2);
-        a {
-            color: $corDaFontePrincipal;
-            text-decoration: none;
-        }
-    }
+  }
 }
 
+section.letreiro {
+  padding: clamp(2vh, 5vh, 8vh) 0;
+  width: 100%;
+  marquee {
+    width: 100%;
+    i {
+      color: $corTextoPreto;
+      font-size: clamp(1em, 1.3em, 2em);
+      font-weight: 600;
+      font-family: $fonteFamiliaPrimaria;
+    }
+    i#vermelhinho {
+      color: $corVermelho;
+      margin-right: clamp(3vw, 6.5vw, 10vw);
+    }
+  }
+}
 
+footer.finalDoSite {
+  background: $gradiente;
+  color: $corDaFontePrincipal;
+  text-align: center;
 
-
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.5rem, 1rem, 2rem);
+    article,
+    nav,
+    .imgSection {
+      max-width: clamp(20%, 30%, 40%);
+      margin: 0 clamp(0.5rem, 1rem, 2rem);
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin: clamp(0.3rem, 0.5rem, 1rem) 0;
+        a {
+          color: $corDaFontePrincipal;
+          text-decoration: none;
+        }
+      }
+    }
+    div.imgSection img {
+      border-radius: 15px;
+      width: 100%;
+    }
+  }
+  div.copyrightSection {
+    padding: clamp(0.5rem, 1rem, 2rem);
+    background-color: rgba(0, 0, 0, 0.2);
+    a {
+      color: $corDaFontePrincipal;
+      text-decoration: none;
+    }
+  }
+}
